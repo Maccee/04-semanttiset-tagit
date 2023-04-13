@@ -1,0 +1,58 @@
+html {
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.6rem;
+  width: 70%;
+}
+
+/* Määritellään Flexin avulla vanhempi (body) ja sen lapset, (header, nav, section, aside, footer) */
+body {
+  display: flex; /* otetaan flex käyttöön vanhemmassa */
+
+  flex-direction: row; /* määritellään flexin suunta row rivi */
+  flex-wrap: wrap; /* wrap flexin rivitys voi rivittyö allekain */
+}
+/* bodyn lapset */
+body > * {
+  width: 100%;
+  flex-grow: 1; /* jos flex-grow on lapsissa sama, lapset yhtä leveitä */
+  flex-basis: 100%; /* lapsen minimi leveys 100% vanhemmasta */
+  padding: 1rem;
+}
+body section,
+body aside {
+  flex-basis: 0;
+}
+body section {
+  flex-grow: 1;
+}
+
+.header {
+  background-color: #df1227;
+}
+.nav {
+  background-color: #f28f2d;
+}
+
+.article-laatikko {
+  background-color: #fec000;
+}
+.aside {
+  background-color: #016fb4;
+}
+.article {
+  background-color: #7ac141;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.footer {
+  background-color: #932b8e;
+}
+.oikealle {
+  float: right;
+}
